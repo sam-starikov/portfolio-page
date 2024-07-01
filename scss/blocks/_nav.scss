@@ -1,10 +1,15 @@
 .nav {
     padding: 25px 0;
+
     color: var(--nav-text-color);
     background-color: var(--black);
+    transition: box-shadow 0.2s ease-in;
 
-    box-shadow: 0px -14px 14px -3px rgb(255 255 255 / 34%) inset;
     user-select: none;
+
+    &:hover {
+        box-shadow: 0px -5px 10px -3px whitesmoke inset;
+    }
 
     &__body {
         display: flex;

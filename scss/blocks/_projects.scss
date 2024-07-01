@@ -1,0 +1,18 @@
+.projects {
+    padding: 70px 0;
+
+    text-align: center;
+    box-shadow: 0px 2px 38px -9px whitesmoke;
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+    }
+}

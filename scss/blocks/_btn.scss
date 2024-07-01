@@ -1,0 +1,22 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 180px;
+    padding: 12px 28px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        opacity: 0.9;
+        background-color: var(--accent);
+    }
+
+    &:active {
+        position: relative;
+        top: 3px;
+    }
+}

@@ -2,10 +2,13 @@
 @import './base/reset';
 @import './base/vars';
 @import './base/base';
+@import './base/mixins';
 
 /* blocks */
 @import './blocks/header';
 @import './blocks/footer';
 @import './blocks/projects';
+@import './blocks/project';
 @import './blocks/logo';
 @import './blocks/nav';
+@import './blocks/btn';
