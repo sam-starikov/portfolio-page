@@ -1,4 +1,4 @@
-.project {
+.project-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,6 +12,12 @@
     border-radius: 10px;
     box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.3);
     background-color: var(--white);
+
+    &--large {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
 
     // aspect-ratio: 1/1;
 

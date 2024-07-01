@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__body">
+                <a href="#!" class="logo">Portfolio</a>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link nav__link--active">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="container">
+            <!-- swiper -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <a href="#!" class="project-card project-card--large">
+                            <div class="project__img">
+                                <img src="./img/01.png" alt="buds landing">
+                            </div>
+                            <h3 class="project__title">buds page</h3>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#!" class="project-card project-card--large">
+                            <div class="project__img">
+                                <img src="./img/01.png" alt="buds landing">
+                            </div>
+                            <h3 class="project__title">buds page</h3>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#!" class="project-card project-card--large">
+                            <div class="project__img">
+                                <img src="./img/01.png" alt="buds landing">
+                            </div>
+                            <h3 class="project__title">buds page</h3>
+                        </a>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__body">
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li><a href="#!"><img src="./img/icons/gitHub.svg" alt="github"></a></li>
+                        <li><a href="#!"><img src="./img/icons/instagram.svg" alt="instagram"></a></li>
+                        <li><a href="#!"><img src="./img/icons/vk.svg" alt="vk"></a></li>
+                        <li><a href="#!"><img src="./img/icons/linkedIn.svg" alt="linkedIn"></a></li>
+                    </ul>
+                </nav>
+                <p class="footer__text">© Sam Starikov 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
