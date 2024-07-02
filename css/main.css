@@ -1,6 +1,7 @@
 /* settings */
 /* Reset and base styles  */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Wittgenstein:wght@600&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -90,6 +91,7 @@ legend {
 }
 
 :root {
+  --font-card: "Wittgenstein", serif;
   --white: #fff;
   --black: #000;
   --main-bg: #fafafa;
@@ -104,7 +106,17 @@ legend {
 /* general */
 html,
 body {
-  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
   font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-size: 18px;
@@ -126,7 +138,7 @@ a {
 .title {
   font-size: clamp(34px, 0.596rem + 7.65vw, 60px);
   font-weight: 700;
-  color: var(--accent);
+  color: var(--black);
 }
 
 .sub-title {
@@ -143,8 +155,8 @@ a {
   padding-top: clamp(30px, -0.804rem + 13.39vw, 180px);
   padding-bottom: 50px;
   text-align: center;
-  -webkit-box-shadow: 0px 2px 38px -9px whitesmoke;
-          box-shadow: 0px 2px 38px -9px whitesmoke;
+  -webkit-box-shadow: 0px -16px 22px 16px rgba(0, 0, 0, 0.6705882353);
+          box-shadow: 0px -16px 22px 16px rgba(0, 0, 0, 0.6705882353);
   background-color: var(--header-bg);
 }
 @media (max-width: 400px) {
@@ -227,14 +239,55 @@ a {
           align-items: center;
   gap: 30px;
 }
-
-.projects {
-  padding: 70px 0;
-  text-align: center;
-  -webkit-box-shadow: 0px 2px 38px -9px whitesmoke;
-          box-shadow: 0px 2px 38px -9px whitesmoke;
+.footer__text {
+  font-size: 26px;
 }
-.projects__body {
+
+.section {
+  padding: 70px 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  background-color: var(--white);
+}
+.section__slider {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.section__slider-btn {
+  position: absolute;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.section__slider-btn--next {
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: red;
+}
+.section__slider-btn--prev {
+  top: 50%;
+  right: 100%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  background-color: green;
+}
+
+.projects__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,9 +306,9 @@ a {
 }
 
 .project-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -267,16 +320,34 @@ a {
   padding: 25px;
   width: 370px;
   height: 350px;
+  font-family: var(--font-card);
   text-align: start;
   border-radius: 10px;
-  -webkit-box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.3);
-          box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 5px 35px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 35px 0 rgba(0, 0, 0, 0.25);
   background-color: var(--white);
 }
+@media (max-width: 800px) {
+  .project-card {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+}
 .project-card--large {
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
+  width: unset;
+  height: unset;
+}
+.project-card--large .project-card__img img {
+  aspect-ratio: auto;
+  width: 741px;
+  height: 546px;
+}
+@media (max-width: 500px) {
+  .project-card--large .project-card__img img {
+    width: unset;
+    height: 546px;
+  }
 }
 .project-card__img {
   border-radius: 10px;
@@ -312,10 +383,6 @@ a {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-.nav:hover {
-  -webkit-box-shadow: 0px -5px 10px -3px whitesmoke inset;
-          box-shadow: 0px -5px 10px -3px whitesmoke inset;
 }
 .nav__body {
   display: -webkit-box;
